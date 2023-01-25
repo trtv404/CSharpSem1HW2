@@ -12,10 +12,15 @@ Write("input second number ");
 int b = int.Parse(ReadLine()!);
 
 int result = 1;
-
-for (int i = 0; i < b; i++) 
+    if (b < 0) 
     {
-    result = result * a;  
-    }
+        WriteLine("wrong number");
+    } 
+        else 
+        {for (int i = 0; i < b; i++) 
+            {
+            result = result * a;  
+            }
+            WriteLine($"{a} to the power of {b} = {result}");
+        }
 
-WriteLine($"{a} to the power of {b} = {result}");
