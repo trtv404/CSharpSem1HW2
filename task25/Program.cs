@@ -11,16 +11,18 @@ int a = int.Parse(ReadLine()!);
 Write("input second number ");
 int b = int.Parse(ReadLine()!);
 
-int result = 1;
-    if (b < 0) 
-    {
-        WriteLine("wrong number");
-    } 
-        else 
-        {for (int i = 0; i < b; i++) 
-            {
-            result = result * a;  
-            }
-            WriteLine($"{a} to the power of {b} = {result}");
+int pow = GetPow(a,b);
+
+WriteLine($"{a} to the power of {b} = {pow}");
+
+int GetPow(int num1, int num2)
+{
+    int result = 1;
+    for (int i = 0; i < num2; i++) 
+        {
+        result = result * num1;  
         }
+        return result;
+    }    
+        
 
