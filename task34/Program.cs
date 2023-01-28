@@ -6,16 +6,16 @@
 
 using static System.Console;
 
-int[] array = GetArray(8);
+Write("Введите количество чисел в массиве ");
+int a = int.Parse(ReadLine()!);
+
+int[] array = GetArray(a);
 PrintArray(array); //
 Write(CountEven(array));
 
 int[] GetArray(int array)
 {
-    Write("Введите количество чисел в массиве ");
-    int a = int.Parse(ReadLine()!);
-
-    int[] arr = new int [a];
+    int[] arr = new int [array];
     for (int i = 0; i < arr.Length; i++)
     {
         arr[i] = new Random().Next(100,1000);
